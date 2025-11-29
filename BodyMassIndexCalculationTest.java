@@ -1,0 +1,116 @@
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class BodyMassIndexCalculationTest {
+    @ParameterizedTest
+    @CsvSource({
+            "137, 29, Ideal Kilo",
+            "137, 34, Ideal Kilo",
+            "140, 31, Ideal Kilo",
+            "140, 37, Ideal Kilo",
+            "142, 33, Ideal Kilo",
+            "142, 39, Ideal Kilo",
+            "145, 35, Ideal Kilo",
+            "145, 42, Ideal Kilo",
+            "147, 37, Ideal Kilo",
+            "147, 44, Ideal Kilo",
+            "150, 39, Ideal Kilo",
+            "150, 47, Ideal Kilo",
+            "152, 41, Ideal Kilo",
+            "152, 49, Ideal Kilo",
+            "155, 44, Ideal Kilo",
+            "155, 52, Ideal Kilo",
+            "157, 45, Ideal Kilo",
+            "157, 54, Ideal Kilo",
+            "160, 48, Ideal Kilo",
+            "160, 57, Ideal Kilo",
+            "163, 49, Ideal Kilo",
+            "163, 59, Ideal Kilo",
+            "165, 52, Ideal Kilo",
+            "165, 62, Ideal Kilo",
+            "168, 53, Ideal Kilo",
+            "168, 64, Ideal Kilo",
+            "170, 56, Ideal Kilo",
+            "170, 67, Ideal Kilo",
+            "173, 58, Ideal Kilo",
+            "173, 69, Ideal Kilo",
+            "175, 60, Ideal Kilo",
+            "175, 72, Ideal Kilo",
+            "178, 62, Ideal Kilo",
+            "178, 74, Ideal Kilo",
+            "180, 64, Ideal Kilo",
+            "180, 77, Ideal Kilo",
+            "183, 66, Ideal Kilo",
+            "183, 79, Ideal Kilo",
+            "185, 68, Ideal Kilo",
+            "185, 82, Ideal Kilo",
+            "188, 70, Ideal Kilo",
+            "188, 84, Ideal Kilo",
+            "191, 72, Ideal Kilo",
+            "191, 87, Ideal Kilo",
+            "193, 74, Ideal Kilo",
+            "193, 89, Ideal Kilo",
+            "195, 76, Ideal Kilo",
+            "195, 92, Ideal Kilo"
+    })
+    public void Body_Mass_Index_Calculation_Test_Woman(int boy, int kilo, String expected) {
+        assertEquals(expected, Body_Mass_Index.Body_Mass_Index_Calculation(boy, kilo));
+    }
+
+    @ParameterizedTest
+    @CsvSource({
+            "137, 29, Ideal Kilo",
+            "137, 34, Ideal Kilo",
+            "140, 31, Ideal Kilo",
+            "140, 38, Ideal Kilo",
+            "142, 34, Ideal Kilo",
+            "142, 40, Ideal Kilo",
+            "145, 36, Ideal Kilo",
+            "145, 43, Ideal Kilo",
+            "147, 39, Ideal Kilo",
+            "147, 46, Ideal Kilo",
+            "150, 41, Ideal Kilo",
+            "150, 49, Ideal Kilo",
+            "152, 44, Ideal Kilo",
+            "152, 53, Ideal Kilo",
+            "155, 46, Ideal Kilo",
+            "155, 55, Ideal Kilo",
+            "157, 49, Ideal Kilo",
+            "157, 58, Ideal Kilo",
+            "160, 51, Ideal Kilo",
+            "160, 61, Ideal Kilo",
+            "163, 53, Ideal Kilo",
+            "163, 64, Ideal Kilo",
+            "165, 56, Ideal Kilo",
+            "165, 68, Ideal Kilo",
+            "168, 58, Ideal Kilo",
+            "168, 70, Ideal Kilo",
+            "170, 61, Ideal Kilo",
+            "170, 73, Ideal Kilo",
+            "173, 63, Ideal Kilo",
+            "173, 76, Ideal Kilo",
+            "175, 66, Ideal Kilo",
+            "175, 79, Ideal Kilo",
+            "178, 68, Ideal Kilo",
+            "178, 83, Ideal Kilo",
+            "180, 71, Ideal Kilo",
+            "180, 85, Ideal Kilo",
+            "183, 73, Ideal Kilo",
+            "183, 88, Ideal Kilo",
+            "185, 76, Ideal Kilo",
+            "185, 91, Ideal Kilo",
+            "188, 78, Ideal Kilo",
+            "188, 94, Ideal Kilo",
+            "191, 80, Ideal Kilo",
+            "191, 98, Ideal Kilo",
+            "193, 83, Ideal Kilo",
+            "193, 100, Ideal Kilo",
+            "195, 85, Ideal Kilo",
+            "195, 103, Ideal Kilo"
+    })
+    public void Body_Mass_Index_Calculation_Test_Man(int boy, int kilo, String expected) {
+        assertEquals(expected, Body_Mass_Index.Body_Mass_Index_Calculation(boy, kilo));
+    }
+}
